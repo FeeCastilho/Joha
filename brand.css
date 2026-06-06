@@ -1,0 +1,145 @@
+/* ============================================================
+   JÔHA · Sistema de marca compartilhado
+   Cuidado e Conexão Com Seus Cabelos
+   ============================================================ */
+
+/* Fontes carregadas via <link> no <head> de cada página (evita FOUT no print/screenshot) */
+
+:root{
+  /* ---- Verdes (do logo) ---- */
+  --pine-900:#1b2117;   /* mais escuro */
+  --pine-800:#222a1d;
+  --forest-700:#2e3629; /* verde do logo */
+  --forest-600:#3a4433;
+  --sage-400:#8a9479;   /* sálvia boho */
+  --sage-200:#c2c8b4;
+
+  /* ---- Dourados ---- */
+  --gold-700:#9c7e34;
+  --gold-500:#c3a24e;   /* dourado principal */
+  --gold-400:#d2b566;
+  --gold-200:#e6d6a6;
+
+  /* ---- Neutros quentes / areia ---- */
+  --sand-50:#f6f1e7;
+  --sand-100:#f0e9da;
+  --oat-200:#e7dcc7;
+  --clay-300:#d8c8b0;
+
+  /* ---- Tinta ---- */
+  --ink-900:#262219;
+  --ink-700:#473f30;
+  --ink-500:#6b6151;
+
+  /* ---- Papéis semânticos ---- */
+  --bg:var(--sand-50);
+  --bg-deep:var(--forest-700);
+  --text:var(--ink-900);
+  --muted:var(--ink-500);
+  --accent:var(--gold-500);
+
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Mulish',-apple-system,Helvetica,Arial,sans-serif;
+
+  --maxw:1180px;
+  --r-sm:8px;
+  --r-md:16px;
+  --r-lg:28px;
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--sans);
+  font-weight:400;
+  font-size:17px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+
+h1,h2,h3,h4{font-family:var(--serif);font-weight:500;line-height:1.16;margin:0;color:var(--ink-900);}
+h1{font-size:clamp(3rem,7vw,5.8rem);letter-spacing:-.01em;line-height:1.1;}
+h2{font-size:clamp(2.2rem,4.4vw,3.6rem);letter-spacing:-.005em;}
+h3{font-size:clamp(1.5rem,2.4vw,2rem);}
+p{margin:0;text-wrap:pretty;}
+a{color:inherit;text-decoration:none;}
+
+.eyebrow{
+  font-family:var(--sans);
+  font-size:.74rem;
+  font-weight:600;
+  letter-spacing:.32em;
+  text-transform:uppercase;
+  color:var(--gold-700);
+}
+.eyebrow.on-dark{color:var(--gold-400);}
+
+.serif-italic{font-style:italic;font-family:var(--serif);}
+
+/* ---- Layout ---- */
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+.section{padding:clamp(64px,9vw,128px) 0;}
+
+/* ---- Botões ---- */
+.btn{
+  display:inline-flex;align-items:center;gap:.6em;
+  font-family:var(--sans);font-weight:600;font-size:.9rem;
+  letter-spacing:.04em;
+  padding:15px 30px;border-radius:999px;
+  cursor:pointer;border:1px solid transparent;
+  transition:transform .25s ease, background .25s ease, color .25s ease, border-color .25s ease;
+  white-space:nowrap;
+}
+.btn:hover{transform:translateY(-2px);}
+.btn-gold{background:var(--gold-500);color:var(--pine-900);}
+.btn-gold:hover{background:var(--gold-400);}
+.btn-forest{background:var(--forest-700);color:var(--sand-50);}
+.btn-forest:hover{background:var(--forest-600);}
+.btn-ghost{background:transparent;border-color:var(--gold-500);color:var(--forest-700);}
+.btn-ghost.on-dark{border-color:var(--gold-400);color:var(--sand-50);}
+.btn-ghost:hover{background:rgba(195,162,78,.12);}
+
+/* ---- Selo / logo ---- */
+.seal{
+  width:64px;height:64px;border-radius:50%;
+  background-size:cover;background-position:center;
+  box-shadow:0 0 0 1px rgba(195,162,78,.45), 0 8px 22px rgba(27,33,23,.18);
+}
+
+/* ---- Placeholder de imagem (sem fotos ainda) ---- */
+.ph{
+  position:relative;overflow:hidden;border-radius:var(--r-md);
+  background:
+    repeating-linear-gradient(135deg,
+      rgba(46,54,41,.045) 0 14px,
+      rgba(46,54,41,.0) 14px 28px),
+    var(--oat-200);
+  display:flex;align-items:flex-end;justify-content:flex-start;
+  color:var(--ink-500);
+  border:1px solid rgba(46,54,41,.10);
+}
+.ph::after{
+  content:attr(data-label);
+  font-family:'Mulish',monospace;
+  font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;
+  margin:14px;padding:5px 10px;border-radius:6px;
+  background:rgba(246,241,231,.78);color:var(--forest-700);
+  border:1px solid rgba(46,54,41,.12);
+}
+.ph.on-dark{
+  background:
+    repeating-linear-gradient(135deg,
+      rgba(230,214,166,.10) 0 14px,
+      rgba(230,214,166,0) 14px 28px),
+    rgba(255,255,255,.04);
+  border-color:rgba(230,214,166,.18);
+}
+.ph.on-dark::after{background:rgba(27,33,23,.55);color:var(--gold-200);border-color:rgba(230,214,166,.2);}
+
+/* ---- Divisor orgânico boho ---- */
+.leaf-rule{display:inline-flex;align-items:center;gap:12px;color:var(--gold-500);}
+.leaf-rule span{height:1px;width:54px;background:var(--gold-500);opacity:.6;}
