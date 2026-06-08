@@ -178,11 +178,23 @@ section[id], header[id]{scroll-margin-top:88px;}
 .price-item .desc{display:block;font-family:var(--sans);font-size:.78rem;color:rgba(246,241,231,.6);margin-top:3px;letter-spacing:.02em;}
 .price-note{margin-top:40px;display:flex;align-items:center;gap:18px;flex-wrap:wrap;}
 
-/* ===================== HEAD SPA ===================== */
-.spa{position:relative;}
-.spa .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,6vw,80px);align-items:center;}
-@media(max-width:880px){.spa .grid-2{grid-template-columns:1fr;gap:36px;}}
-.spa .ph{aspect-ratio:1/1;}
+/* ===================== ASSINATURAS (JÔHA CLUB) ===================== */
+.club{background:radial-gradient(120% 130% at 80% -10%, var(--forest-600) 0%, var(--forest-700) 52%, var(--pine-900) 100%);color:var(--sand-100);}
+.club-head{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(36px,6vw,72px);align-items:center;}
+@media(max-width:920px){.club-head{grid-template-columns:1fr;gap:40px;}}
+.club-head h2{color:var(--sand-50);}
+.club-head p{color:rgba(246,241,231,.84);font-size:1.02rem;max-width:48ch;}
+.club-plans{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.club-card{position:relative;display:flex;flex-direction:column;gap:7px;padding:26px 24px;border-radius:var(--r-md);
+  background:rgba(246,241,231,.05);border:1px solid rgba(230,214,166,.2);transition:transform .3s ease, background .3s ease, border-color .3s ease;}
+.club-card:hover{transform:translateY(-5px);background:rgba(246,241,231,.09);border-color:rgba(230,214,166,.4);}
+.club-card.feat{grid-row:span 2;justify-content:center;background:rgba(230,214,166,.1);border-color:rgba(230,214,166,.45);}
+.cc-flag{position:absolute;top:16px;right:16px;font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--pine-900);background:var(--gold-400);padding:5px 11px;border-radius:999px;}
+.cc-name{font-family:var(--serif);font-size:1.7rem;color:var(--gold-200);line-height:1;}
+.cc-price{font-family:var(--serif);font-size:2rem;color:var(--sand-50);font-weight:600;}
+.cc-price small{font-family:var(--sans);font-size:.8rem;font-weight:500;color:rgba(246,241,231,.6);margin-left:3px;}
+.cc-desc{font-size:.86rem;color:rgba(246,241,231,.72);line-height:1.45;}
+@media(max-width:520px){.club-plans{grid-template-columns:1fr;}.club-card.feat{grid-row:auto;}}
 
 /* ===================== EQUIPE ===================== */
 .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:46px;}
@@ -196,6 +208,12 @@ section[id], header[id]{scroll-margin-top:88px;}
 .visit .grid-2{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(36px,6vw,72px);align-items:center;}
 @media(max-width:880px){.visit .grid-2{grid-template-columns:1fr;gap:36px;}}
 .visit .ph{aspect-ratio:4/3;min-height:280px;}
+.map-embed{position:relative;display:block;border-radius:var(--r-md);overflow:hidden;aspect-ratio:4/3;min-height:280px;
+  border:1px solid rgba(46,54,41,.12);box-shadow:0 18px 44px -22px rgba(27,33,23,.5);}
+.map-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(.32) sepia(.12) saturate(.92);transition:filter .4s ease;}
+.map-embed:hover iframe{filter:grayscale(0) sepia(0) saturate(1);}
+.map-pin{position:absolute;left:14px;bottom:14px;z-index:2;font-family:var(--sans);font-size:.74rem;font-weight:600;letter-spacing:.06em;
+  padding:8px 14px;border-radius:999px;background:var(--forest-700);color:var(--gold-200);box-shadow:0 6px 18px rgba(27,33,23,.3);pointer-events:none;}
 .info-row{display:flex;gap:16px;padding:22px 0;border-bottom:1px solid rgba(46,54,41,.12);}
 .info-row:last-child{border-bottom:none;}
 .info-row .ic{width:40px;height:40px;flex:none;border-radius:50%;background:#fff;display:grid;place-items:center;color:var(--gold-700);border:1px solid rgba(46,54,41,.1);}
