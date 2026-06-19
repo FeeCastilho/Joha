@@ -40,6 +40,7 @@
 
   --serif:'Cormorant Garamond',Georgia,serif;
   --sans:'Mulish',-apple-system,Helvetica,Arial,sans-serif;
+  --quest:'Questrial','Mulish',-apple-system,Helvetica,Arial,sans-serif;
 
   --maxw:1180px;
   --r-sm:8px;
@@ -69,7 +70,7 @@ p{margin:0;text-wrap:pretty;}
 a{color:inherit;text-decoration:none;}
 
 .eyebrow{
-  font-family:var(--sans);
+  font-family:var(--quest);
   font-size:.74rem;
   font-weight:600;
   letter-spacing:.32em;
@@ -111,6 +112,7 @@ a{color:inherit;text-decoration:none;}
 }
 
 /* ---- Placeholder de imagem (sem fotos ainda) ---- */
+.ph.has-img::after{display:none;}
 .ph{
   position:relative;overflow:hidden;border-radius:var(--r-md);
   background:

@@ -16,7 +16,7 @@
   /* ---- palavra cinética (especialidades) ---- */
   const rot = document.getElementById('rotWord');
   if(rot && !reduce){
-    const words = ['tratamento capilar','saúde do couro cabeludo','coloração terapêutica','cortes com essência'];
+    const words = ['tratamento capilar','terapia do couro cabeludo','alinhamento capilar','cortes & visagismo'];
     let i = 0;
     setInterval(()=>{
       i = (i+1) % words.length;
@@ -26,7 +26,7 @@
   }
 
   /* ---- scroll reveals ---- */
-  const revealSel = '.manifesto .leaf-rule, .manifesto p, #pilares .sec-head, .pillar, .prices .head-row, .price-item, .price-note, .club-head > div:first-child, .club-card, #equipe .sec-head, .member, #visite .ph, #visite .eyebrow, #visite h2, #visite .info-row, .ig .eyebrow, .ig h2, .ig p, .ig .ph, .ig .btn, .cta-final .seal, .cta-final h2, .cta-final p, .cta-final > .wrap > div:last-child';
+  const revealSel = '.manifesto .leaf-rule, .manifesto p, #pilares .sec-head, .pillar, .prices .head-row, .price-item, .price-note, .club-head > div:first-child, .club-card, #equipe .sec-head, .method-step, #visite .ph, #visite .eyebrow, #visite h2, #visite .info-row, .ig .eyebrow, .ig h2, .ig p, .ig .ph, .ig .btn, .cta-final .seal, .cta-final h2, .cta-final p, .cta-final > .wrap > div:last-child';
   const revs = [...document.querySelectorAll(revealSel)];
   if(!reduce){
     revs.forEach(el=>el.classList.add('reveal'));

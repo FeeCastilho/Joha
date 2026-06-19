@@ -13,8 +13,8 @@
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#2e3629">
 <link rel="canonical" href="https://www.johacapilar.com.br/assinaturas.html">
-<link rel="icon" type="image/jpeg" href="assets/joha-logo.jpg">
-<link rel="apple-touch-icon" href="assets/joha-logo.jpg">
+<link rel="icon" type="image/png" href="assets/joha-icon.png">
+<link rel="apple-touch-icon" href="assets/joha-icon.png">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="JÔHA">
@@ -22,15 +22,15 @@
 <meta property="og:title" content="JÔHA CLUB · Assinaturas de Cuidado Capilar">
 <meta property="og:description" content="Seu novo hábito de autocuidado começa aqui. Planos mensais recorrentes com escovas, tratamentos, terapias e spa capilar.">
 <meta property="og:url" content="https://www.johacapilar.com.br/assinaturas.html">
-<meta property="og:image" content="https://www.johacapilar.com.br/assets/joha-logo.jpg">
+<meta property="og:image" content="https://www.johacapilar.com.br/assets/joha-og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="JÔHA CLUB · Assinaturas de Cuidado Capilar">
 <meta name="twitter:description" content="Planos mensais de cuidado capilar com acompanhamento contínuo.">
-<meta name="twitter:image" content="https://www.johacapilar.com.br/assets/joha-logo.jpg">
+<meta name="twitter:image" content="https://www.johacapilar.com.br/assets/joha-og.jpg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Mulish:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Mulish:wght@300;400;500;600;700&family=Questrial&display=swap">
 <link rel="stylesheet" href="brand.css">
 <style>
   section[id]{scroll-margin-top:84px;}
@@ -38,7 +38,7 @@
   .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 28px;max-width:var(--maxw);margin:0 auto;}
   .brand-lock{display:flex;align-items:center;gap:14px;}
   .brand-lock .seal{width:46px;height:46px;}
-  .brand-lock .nm{font-family:var(--serif);font-size:1.5rem;letter-spacing:.2em;color:var(--forest-700);}
+  .brand-lock .nm{font-family:var(--serif);font-size:1.5rem;letter-spacing:.2em;color:#003b09;}
   .nav-links{display:flex;align-items:center;gap:26px;}
   .nav-links a{font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-700);transition:color .2s;}
   .nav-links a:hover{color:var(--gold-700);}
@@ -46,10 +46,11 @@
 
   .page-hero{position:relative;overflow:hidden;background:radial-gradient(130% 120% at 70% -10%, var(--forest-600) 0%, var(--forest-700) 48%, var(--pine-900) 100%);color:var(--sand-50);text-align:center;padding:clamp(70px,10vw,120px) 28px;}
   .page-hero .seal{width:84px;height:84px;margin:0 auto 26px;}
+  .page-hero .hero-mark{width:min(62%,330px);height:auto;margin:0 auto 24px;display:block;}
   .page-hero h1{color:var(--gold-200);font-size:clamp(2.8rem,6vw,4.8rem);line-height:1.06;}
   .page-hero .tagline{font-family:var(--serif);font-style:italic;font-size:clamp(1.2rem,2.4vw,1.7rem);color:var(--sand-100);margin-top:16px;}
   .page-hero p.sub{color:var(--sand-100);max-width:54ch;margin:18px auto 0;opacity:.9;}
-  .page-hero .seal,.page-hero h1,.page-hero .tagline,.page-hero p.sub{opacity:0;transform:translateY(20px);animation:joha-rise .9s cubic-bezier(.22,.61,.36,1) forwards;}
+  .page-hero .seal,.page-hero .hero-mark,.page-hero h1,.page-hero .tagline,.page-hero p.sub{opacity:0;transform:translateY(20px);animation:joha-rise .9s cubic-bezier(.22,.61,.36,1) forwards;}
   .page-hero h1{animation-delay:.1s;} .page-hero .tagline{animation-delay:.22s;} .page-hero p.sub{animation-delay:.34s;}
   @keyframes joha-rise{to{opacity:1;transform:none;}}
 
@@ -76,6 +77,13 @@
   .plan.feat .price .per{color:rgba(246,241,231,.7);}
   .plan.feat .days{color:var(--gold-200);border-color:rgba(230,214,166,.3);}
   .plan-flag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--gold-500);color:var(--pine-900);font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:6px 16px;border-radius:999px;white-space:nowrap;}
+
+  /* plano Color — toque de cor sutil */
+  .plan-color{overflow:hidden;}
+  .color-ribbon{position:absolute;top:0;left:0;right:0;height:6px;border-radius:var(--r-lg) var(--r-lg) 0 0;
+    background:linear-gradient(90deg,#e8746b 0%,#e7b24c 25%,#5aa469 50%,#4f8fd0 75%,#9b6cc4 100%);}
+  .plan-color .rainbow{background:linear-gradient(90deg,#d8695f 0%,#d99a3a 30%,#3f9a5b 55%,#3f7fc4 78%,#8d5bbf 100%);
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;font-style:italic;}
   .pname{font-family:var(--serif);font-size:1.85rem;color:var(--forest-700);letter-spacing:.02em;line-height:1.05;}
   .ptag{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-700);margin-top:6px;min-height:1.1em;}
   .plan.feat .ptag{color:var(--gold-300,#d2b566);}
@@ -116,7 +124,7 @@
   .scroll-prog{position:fixed;top:0;left:0;height:3px;width:0;z-index:60;background:linear-gradient(90deg,var(--gold-700),var(--gold-400),var(--gold-200));transition:width .1s linear;}
   @media (prefers-reduced-motion: reduce){
     .reveal{opacity:1!important;transform:none!important;transition:none!important;}
-    .page-hero .seal,.page-hero h1,.page-hero .tagline,.page-hero p.sub{opacity:1!important;transform:none!important;animation:none!important;}
+    .page-hero .seal,.page-hero .hero-mark,.page-hero h1,.page-hero .tagline,.page-hero p.sub{opacity:1!important;transform:none!important;animation:none!important;}
     .scroll-prog{display:none;}
   }
   @media print{
@@ -138,7 +146,6 @@
 <nav class="nav">
   <div class="nav-inner">
     <a href="index.html" class="brand-lock">
-      <span class="seal" style="background-image:url('assets/joha-logo.jpg')"></span>
       <span class="nm">JÔHA</span>
     </a>
     <div class="nav-links">
@@ -151,11 +158,11 @@
 </nav>
 
 <header class="page-hero">
-  <div class="seal" style="background-image:url('assets/joha-logo.jpg')"></div>
+  <img class="hero-mark" src="assets/joha-wordmark.png" alt="JÔHA">
   <div class="eyebrow on-dark">JÔHA CLUB · Plano mensal recorrente</div>
   <h1 style="margin-top:14px;">Seu novo hábito<br>de autocuidado</h1>
   <p class="tagline">Escolha cuidar de você, todos os meses.</p>
-  <p class="sub">No JÔHA, a saúde capilar se constrói com constância e acompanhamento. Os planos do JÔHA CLUB unem escovas, tratamentos e terapias em um ritual mensal pensado para a evolução do seu cabelo.</p>
+  <p class="sub">No JÔHA, a saúde capilar se constrói com constância, tecnologia e acompanhamento por diagnóstico. Os planos do JÔHA CLUB unem escovas, tratamentos e terapias em um protocolo mensal pensado para a evolução do seu cabelo.</p>
 </header>
 
 <!-- COMO FUNCIONA -->
@@ -168,7 +175,7 @@
     <div class="how-grid">
       <div class="how-step"><span class="n">1</span><div><h3>Escolha seu plano</h3><p>Do Essencial ao Excellence, há um ritmo de cuidado para cada rotina e necessidade.</p></div></div>
       <div class="how-step"><span class="n">2</span><div><h3>Agende quando quiser</h3><p>Use seus benefícios ao longo do mês nos dias indicados de cada plano.</p></div></div>
-      <div class="how-step"><span class="n">3</span><div><h3>Evolua mês a mês</h3><p>Com avaliação e acompanhamento, seu cabelo melhora de forma consistente.</p></div></div>
+      <div class="how-step"><span class="n">3</span><div><h3>Evolua mês a mês</h3><p>Com avaliação por tricoscopia e tecnologia, seu cabelo melhora de forma consistente e mensurável.</p></div></div>
     </div>
   </div>
 </section>
@@ -178,7 +185,7 @@
   <div class="wrap">
     <div class="sec-head" style="max-width:600px;margin-bottom:46px;">
       <div class="eyebrow">Os planos</div>
-      <h2 style="margin-top:10px;">Encontre o seu ritual</h2>
+      <h2 style="margin-top:10px;">Encontre o seu plano</h2>
       <p style="color:var(--muted);">Todos os planos são mensais e recorrentes. Os benefícios são utilizados dentro do mês vigente.</p>
     </div>
 
@@ -234,15 +241,17 @@
       </div>
 
       <!-- COLOR -->
-      <div class="plan reveal">
-        <div class="pname">JÔHA Color</div>
+      <div class="plan plan-color reveal">
+        <span class="color-ribbon" aria-hidden="true"></span>
+        <div class="pname">JÔHA <span class="rainbow">Color</span></div>
         <div class="ptag">Para cabelos coloridos</div>
-        <div class="price"><span class="v">R$ 299</span><span class="per">/ mês</span></div>
+        <div class="price"><span class="v">R$ 319</span><span class="per">/ mês</span></div>
         <ul class="feat-list">
           <li>4 escovas simples ou com Steampod</li>
           <li>1 tratamento capilar revitalizante</li>
           <li>1 shot nutritivo (em uma das escovações)</li>
           <li>1 coloração terapêutica (raiz ou cabelo todo)</li>
+          <li>Spa capilar</li>
         </ul>
         <div class="days">Agendamentos de terça a sexta-feira</div>
         <a class="btn btn-ghost" href="https://wa.me/5511941795538?text=Ol%C3%A1!%20Tenho%20interesse%20no%20plano%20J%C3%94HA%20Color." target="_blank">Assinar Color</a>
@@ -300,7 +309,7 @@
 <section class="section" style="padding-top:0;">
   <div class="wrap">
     <div class="editorial">
-      <p>“A saúde capilar se constrói com constância, acompanhamento e cuidado contínuo.”</p>
+      <p>“A saúde capilar se constrói com diagnóstico, tecnologia e acompanhamento contínuo.”</p>
       <span class="sig">JÔHA · Cuidado e conexão com seus cabelos</span>
     </div>
   </div>
@@ -338,10 +347,9 @@
 <footer class="footer-base">
   <div class="fb-inner">
     <div class="brand-lock">
-      <span class="seal" style="background-image:url('assets/joha-logo.jpg')"></span>
       <span style="font-family:var(--serif);letter-spacing:.2em;font-size:1.2rem;color:var(--gold-200);">JÔHA</span>
     </div>
-    <div>Av. Anacé, 234, Campo Limpo, São Paulo · <a href="https://www.instagram.com/johacapilar" target="_blank">@johacapilar</a></div>
+    <div>Av. Anacé, 234, Jd. Umarizal, São Paulo · <a href="https://www.instagram.com/johacapilar" target="_blank">@johacapilar</a></div>
   </div>
 </footer>
 
